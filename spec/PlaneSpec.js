@@ -22,6 +22,4 @@ describe('Plane', function() {
   });
 
 
-
-
 });
