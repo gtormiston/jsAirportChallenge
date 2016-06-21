@@ -1,5 +1,18 @@
-describe("Some words", function() {
-  it("is a spec test", function() {
-    expect(true).toBe(true);
-  })
-})
+'use strict';
+
+describe ( "Feature test", function()  {
+
+  var plane;
+  var airport;
+
+  beforeEach( function() {
+    plane = new Plane();
+    airport = new Airport();
+  });
+
+  it("Planes can be instructed to land at an airport", function() {
+    plane.land(airport);
+    expect( airport.planes() ).toContain(plane);
+  });
+
+});
